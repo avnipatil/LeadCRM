@@ -1,0 +1,16 @@
+.addleads{
+    background-color: #fff;
+    box-shadow: 0px 7px 25px rgb(0 0 0 / 8%);
+    border-radius: 5px;
+}
+.addformcols{
+    margin-left: 8%;
+    box-shadow: 0px 7px 25px rgb(0 0 0 / 8%);
+}
+@media screen and (min-width:320px) and (max-width:575px){
+    .addformcols{margin-left: 0px;
+    margin-top: 20%;}
+}
+@media screen and (min-width:576px) and (max-width:768px){
+    
+}

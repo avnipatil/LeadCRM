@@ -1,0 +1,32 @@
+.sidesec{
+    text-align: justify;
+    padding-left: 7%;
+}
+.sidelistul{
+    color: #fff;
+}
+.sidebarcols{
+    margin-top: 5%;
+    bottom: 0;
+    float: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    display: block!important;
+}
+.sidebagde{
+    background-color: #75b8fd;
+}
+@media screen and (min-width:320px) and (max-width:575px) {
+    .sidebarcols{ display: none!important;}
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .sidebrand{ margin-top: 18%;}
+}
+@media screen and (min-width:1024px) and (max-width:1200px) {
+    .sidebarcols{ width: 160px;}
+}
+@media screen and (min-width:1200px) and (max-width:2000px) {
+    .sidebarcols{ width: 200px;}
+}
+
