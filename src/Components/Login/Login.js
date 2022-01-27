@@ -20,6 +20,7 @@ const Login=()=>{
         console.log(retrivedata); 
         }
     }
+
     //For Login
     const { register, handleSubmit,reset, formState:{errors} } = useForm({mode: "onBlur"});
     const onSubmit = data =>{
@@ -27,13 +28,15 @@ const Login=()=>{
         .then(res =>{
             console.log(res);
                 console.log(res.data);
-                const datatoken = res.data.token;
+                const datatoken = res.data.token;  
+               
                 //here set the token in local storage & pass to new page
                 localStorage.setItem("user", JSON.stringify(datatoken));
-                // console.log(datatoken); 
-                setUserdata(data.password);
-                     console.log(userdata);  
-                     reset(); 
+                // localStorage.setItem("userid", res.data.data.user._id);
+
+                    setUserdata(data.password);
+                    console.log(userdata);  
+                    reset(); 
                 if(res.status === 200)
                 {
                      navigate('/dashboard');    

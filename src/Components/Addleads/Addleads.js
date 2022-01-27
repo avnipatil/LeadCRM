@@ -11,8 +11,10 @@ import Swal from "sweetalert2";
 const Addleads=()=>{
 //here get the token from local storage & pass that variable into api
      const tok2 =  JSON.parse(localStorage.getItem("user"));
-     const addid = JSON.parse(localStorage.getItem("username"));
-     console.log(addid);
+   
+     const Userid = localStorage.getItem('userid');
+     console.log(Userid);
+
  //This is for navigation login succss to nxt page 
     const navigate = useNavigate()
 //For ADD data
@@ -44,7 +46,7 @@ const Addleads=()=>{
                         })
                     }
         }).catch(error => alert(error.message))
-        // reset();
+        reset();
         }
 
     return(
@@ -58,17 +60,11 @@ const Addleads=()=>{
                     <div className='col-lg-8 col-md-8 col-sm-8 addformcols py-4'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='row'>
-                        {/* <div className="col-lg-6  col-md-12 col-sm-12 my-2">
-                            <input type="text" name='_id' className="form-control" placeholder="Enter Fname" style={{width:'100%'}}
-                            {...register("_id",
-                                { required: true, maxLength: 10})}/>
-                             <div className='passtxtdiv'>
-                                {errors.fname && "Please enter Fname."}
-                                    {errors?.fname?.type === "maxLength" && (
-                                    <p >Fname cannot exceed 10 characters</p>
-                                )}
-                            </div>
-                        </div>  */}
+
+                        <input type="text" name='Userid' className="form-control" 
+                            {...register("_id")} style={{width:'100%'}}
+                        />
+
                         <div className="col-lg-6  col-md-12 col-sm-12 my-2">
                             <input type="text" name='fname' className="form-control" placeholder="Enter Fname" style={{width:'100%'}}
                             {...register("fname",
