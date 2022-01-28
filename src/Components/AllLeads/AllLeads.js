@@ -39,7 +39,7 @@ const AllLeads=()=>{
         }
     }
 //For pagination
-    const [postsPerPage] = useState(10);
+    const [postsPerPage] = useState(5);
     const [offset, setOffset] = useState(1);
     const handlePageClick = (e) => {
         const selectedPage = e.selected;
@@ -68,6 +68,7 @@ const AllLeads=()=>{
                 <div className='container-fluid'>
                     <div className='row'> 
                     <div className='col-lg-12 col-md-12 col-sm-12 my-2'>
+                    <h3 className='headtxt'>All Leads Here..</h3>
                             <span className='allleadsearchspn mt-3'>
                                 <form >
                                     <input type="text" className='myInputsearch my-2 mx-2' placeholder="Search by Here.." 

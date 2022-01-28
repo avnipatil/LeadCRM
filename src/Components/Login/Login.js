@@ -26,17 +26,16 @@ const Login=()=>{
     const onSubmit = data =>{
         axios.post(`https://qa-platform-api.herokuapp.com/user/login`, data)
         .then(res =>{
-            console.log(res);
+                console.log(res);
                 console.log(res.data);
-                const datatoken = res.data.token;  
-               
+                const datatoken = res.data.token;               
                 //here set the token in local storage & pass to new page
                 localStorage.setItem("user", JSON.stringify(datatoken));
-                // localStorage.setItem("userid", res.data.data.user._id);
 
-                    setUserdata(data.password);
-                    console.log(userdata);  
-                    reset(); 
+                // localStorage.setObj("userid",JSON.stringify(res.data.data.user._id));
+                // console.log(res.data.data.user._id);
+
+                setUserdata(data.password);                 
                 if(res.status === 200)
                 {
                      navigate('/dashboard');    
@@ -48,15 +47,17 @@ const Login=()=>{
                         timer: 2000
                       })
                 }         
-        }).catch(error => 
+        })
+        .catch(error => 
             Swal.fire({
-                        position:'centerd',
+                        position:'top',
                         icon: 'warning',
                         title: 'Sorry,Incorrect Login',
                         showConfirmButton: false,
                         timer: 2000
                       })
-                )    
+                ) 
+         reset();    
     }
     return(
         <>

@@ -212,7 +212,7 @@ const tok =  JSON.parse(localStorage.getItem("user"));
  useEffect(() => {
      axios.get(`https://qa-platform-api.herokuapp.com/lead`, { headers: {"Authorization" : `Bearer ${tok}`} })
          .then((res) => {
-             console.log(res.data.leadData);
+            //  console.log(res.data.leadData);
               setTotalapilead(res.data.count);
               console.log(totalapileads);
          })
@@ -222,6 +222,7 @@ const tok =  JSON.parse(localStorage.getItem("user"));
         <>
         <div className="contentcols">
             <main className="row">
+                <h3 className='headtxt'>Welcome To Dashboard</h3>
             <div style={{textAlign:'justify'}}>
             {/* select dropdown logic */}
                 <Select

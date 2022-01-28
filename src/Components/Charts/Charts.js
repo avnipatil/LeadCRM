@@ -8,11 +8,11 @@ function Charts (){
 const data = [
     {
       name: 'Jan',
-      "Active User": 3000
+      "Active User": 5000
     },
     {
       name: 'Feb',
-      "Active User": 5000
+      "Active User": 7000
     },
     {
       name: 'Mar',

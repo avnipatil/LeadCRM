@@ -10,7 +10,7 @@ const Header=()=>{
     const logout = (data) =>{
             console.log(data);
            localStorage.removeItem("user",(data.token));  
-           navigate('/login');        
+           navigate('/');        
     }
 
     return(

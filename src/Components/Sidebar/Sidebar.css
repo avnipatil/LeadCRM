@@ -5,6 +5,9 @@
 .sidelistul{
     color: #fff;
 }
+.sidelistul:hover{
+    color:lightblue;
+}
 .sidebarcols{
     margin-top: 5%;
     bottom: 0;

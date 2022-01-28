@@ -98,6 +98,7 @@ const[setclientres,setClientres] = useState(leadnew.client_resone);
                 <div className='col-lg-2 col-md-2 col-sm-2'></div>
                     <div className='col-lg-8 col-md-8 col-sm-8 addformcols py-4'>
                     <form onSubmit={handleSubmit(onSubmit)}>
+                    <h3 className='headtxt'>Update Lead Here ..</h3>
                         <div className='row'>
                         <div className="col-lg-6  col-md-12 col-sm-12 my-2">
                             <input onChange={(e)=>setFname(e.target.value)} defaultValue={leadnew.fname}  type="text" name='fname' className="form-control" placeholder="Enter Fname" style={{width:'100%'}}

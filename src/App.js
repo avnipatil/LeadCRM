@@ -32,9 +32,9 @@ function App() {
                   <Route path='*' element={<Login/>}/>
                  </>
             }            
-                <Route path='/' element={<Login/>}/>
+                {/* <Route path='/' element={<Login/>}/>
                 <Route exact element={<Login/>}/>
-                <Route path='/login' element={<Login/>}/>
+                <Route path='/login' element={<Login/>}/> */}
             </Routes>
       </BrowserRouter>
     </div>
